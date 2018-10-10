@@ -1,0 +1,44 @@
+{
+  "name": "empty-project",
+  "description": "A basic empty project template",
+  "version": "0.0.0-development",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.base.json",
+    "clean": "rimraf dist",
+    "coverage": "jest --coverage",
+    "dependency-check": "dependency-check . --unused --no-dev && dependency-check . --missing --no-dev",
+    "lint": "tslint -p tsconfig.json",
+    "test": "tsc --noemit && jest",
+    "verify": "npm run lint && npm run coverage && npm run build && npm run dependency-check",
+    "watch": "jest --watch"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unional/empty-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/unional/empty-project/issues"
+  },
+  "homepage": "https://github.com/unional/empty-project",
+  "devDependencies": {
+    "@types/jest": "^23.3.5",
+    "@types/node": "^10.11.6",
+    "dependency-check": "^3.2.1",
+    "eslint": "^5.6.1",
+    "eslint-plugin-unional": "^1.0.0",
+    "jest": "^23.6.0",
+    "jest-audio-reporter": "^2.0.1",
+    "jest-watch-suspend": "^1.1.0",
+    "jest-watch-toggle-config": "^1.0.2",
+    "ts-jest": "^23.10.4",
+    "tslint": "^5.11.0",
+    "tslint-config-unional": "^0.9.6",
+    "typescript": "^3.1.2"
+  }
+}
